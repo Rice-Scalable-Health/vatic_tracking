@@ -1,5 +1,12 @@
 import pytrack
 import cpptrack
+########################################
+#              START ADD
+########################################
+import flashtrack
+########################################
+#                END ADD
+########################################
 from utils import filterboxes
 from tracking.base import Path
 
@@ -7,6 +14,14 @@ from tracking.base import Path
 onlinetrackers = {}
 onlinetrackers.update(pytrack.online)
 onlinetrackers.update(cpptrack.online)
+
+########################################
+#              START ADD
+########################################
+onlinetrackers.update(flashtrack.online)
+########################################
+#                END ADD
+########################################
 
 bidirectionaltrackers = {}
 bidirectionaltrackers.update(pytrack.bidirectional)

@@ -27,10 +27,13 @@ extensions = Extension(
     language="c++",
 )
 
+########################################
+# ADDED "flashtrack" to packages list
+########################################
 setup(
     name = "tracking",
     author = "John Doherty, Charlie Ma",
-    packages = ["tracking", "pytrack"],
+    packages = ["tracking", "pytrack", "flashtrack"],
     ext_modules = cythonize(extensions),
     data_files=[('config', ['./cpptrack/TLDparameters.yml'])]
 )
